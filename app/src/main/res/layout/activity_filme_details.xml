@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.filmedetails.FilmeDetailsActivity"
+    android:fitsSystemWindows="true"
+    android:background="@color/backGround"
+    >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:fitsSystemWindows="true"
+            android:theme="@style/Theme.CollapsingToolbar.AppBarOverlay"
+            >
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                app:toolbarId="@id/toolbar"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:contentScrim="@color/colorPrimaryDark">
+
+                <ImageView
+                    android:id="@+id/banner_filme"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:keepScreenOn="true"
+                    android:scaleType="centerCrop"
+                    app:layout_collapseMode="parallax"
+                    tools:src="@drawable/deadpoll"/>
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:popupTheme="@style/Theme.CollapsingToolbar.PopupOverlay"
+                    tools:title="Vegetto"
+                    app:menu="@menu/top_app_bar"
+                    app:navigationIcon="@drawable/ic_close_24"
+                    app:titleCentered="true"
+                    android:elevation="0dp"
+                    app:layout_collapseMode="pin"
+                    android:background="@android:color/transparent"
+                    />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:paddingBottom="30dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp"
+                    android:backgroundTint="@color/backGroundAd"
+                    >
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp">
+
+                        <LinearLayout
+                            android:id="@+id/poster_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="16dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginBottom="16dp"
+                            >
+
+                            <ImageView
+                                android:id="@+id/poster_image"
+                                android:layout_width="150dp"
+                                android:layout_height="250dp"
+                                android:scaleType="centerCrop"
+                                android:layout_marginBottom="16dp"
+                                tools:src="@drawable/fundo_roxo_dragonball"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="16dp">
+
+                                <ImageView
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:src="@drawable/ic_stars_24"
+                                    android:layout_marginEnd="8dp"
+                                    />
+
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:id="@+id/rating"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="8/10"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorAccent"
+                                    />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:id="@+id/layout_overview"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:orientation="vertical"
+                            app:layout_constraintStart_toEndOf="@+id/poster_layout"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@+id/poster_layout"
+                            android:layout_marginTop="35dp"
+                            android:layout_marginBottom="16dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/overview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ipson"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:justificationMode="inter_word"
+                                />
+
+                            <TextView
+                                android:id="@+id/genres"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Gêneros: "
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorAccent"
+                                android:justificationMode="inter_word"
+                                />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp"
+                    android:backgroundTint="@color/backGroundAd"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/overview"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Trailer"
+                            android:textSize="30sp"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            />
+
+
+                        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                            android:id="@+id/player_trailer"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            app:autoPlay="false"
+                            android:layout_margin="8dp"
+                            />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Elenco"
+                    android:textSize="30sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp"
+                    />
+
+               <androidx.recyclerview.widget.RecyclerView
+                   android:id="@+id/recyclerview_cast"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="16dp"
+                   />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vídeos"
+                    android:textSize="30sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_videos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp"
+                    android:backgroundTint="@color/backGroundAd"
+                    android:layout_margin="16dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/overview"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/produtora_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Paramount"
+                            android:layout_marginTop="8dp"
+                            android:textSize="30sp"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            />
+
+                        <ImageView
+                            android:id="@+id/produtora"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:src="@drawable/deadpoll"
+                            android:scaleType="centerInside"
+                            android:layout_margin="16dp"
+                            />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="fab"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_stars_24"
+        app:layout_anchor="@id/app_bar_layout"
+        app:layout_anchorGravity="bottom|end"
+        android:backgroundTint="@color/colorAccent"
+        app:borderWidth="0dp"
+        />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

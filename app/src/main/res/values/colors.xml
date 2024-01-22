@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="whiteBG">#7EFFFFFF</color>
+    <color name="colorPrimary">#8F0826</color>
+    <color name="colorPrimaryDark">#85142E</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorAppbar">#EE5555</color>
+    <color name="colorImagePlaceholder">#D3D3D3</color>
+    <color name="transparentBlack">#80000000</color>
+    <color name="backGroundAd">#D1262728</color>
+    <color name="backGround">#1F2123</color>
+</resources>

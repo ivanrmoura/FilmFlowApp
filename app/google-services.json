@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "585468473480",
+    "project_id": "moviesapp-5cb67",
+    "storage_bucket": "moviesapp-5cb67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585468473480:android:caf0cd62fcf6d6c3366f3d",
+        "android_client_info": {
+          "package_name": "br.com.ivan.ninjaflixmvvm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWY9O8UzLR_wlG3mG6QMxXqIIThllJ8c8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

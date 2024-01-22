@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Film Flow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="login__error_user_no_registered">Não existe usuário registrado com esse email.</string>
+    <string name="login__error_wrong_password">Senha incorreta.</string>
+    <string name="login__error_unknown_error">Algo deu errado, tente novamente mais tarde.</string>
+    <string name="login__error_enter_email">Digite seu e-mail.</string>
+    <string name="login__error_enter_password">Digite sua senha.</string>
+
+
+    <string name="signup__header">Criar conta</string>
+    <string name="signup__email_hint">Email</string>
+    <string name="signup__password_hint">Senha</string>
+    <string name="signup__conf_password">Confirmar senha</string>
+    <string name="signup__signup_button">Registro</string>
+    <string name="signup__signup_successfully">Conta criada com sucesso</string>
+    <string name="signup__error_password_insecure">Sua senha deve ter pelo menos 6 caracteres</string>
+    <string name="signup__error_passwords_match">As senhas não correspondem</string>
+    <string name="signup__error_email_already_registered">Já existe uma conta cadastrada com este e-mail</string>
+    <string name="signup__error_unknown_error">Algo deu errado, tente novamente mais tarde</string>
+
+    <string name="edit">Edit</string>
+    <string name="favorite">favorite</string>
+    <string name="more">More</string>
+
+    <string name="ipson">Mussum Ipsum, cacilds vidis litro abertis.  Nulla id gravida magna, ut semper sapien. Si num tem leite então bota uma pinga aí cumpadi! Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Per aumento de cachacis, eu reclamis.</string>
+
+</resources>
